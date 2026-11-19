@@ -1,14 +1,10 @@
 :root {
 
     --primary-color: #0f3d3e;
-
-    --accent-color: #d4af37;
-
-    --secondary-color: #f9f6ef;
-
-    --text-color: #2c2c2c;
-
-    --border-color: #d6c9a8;
+    --accent-color: #d4e9e2;
+    -secondary-color: #f7f7f7;
+    --text-color: #1e3932;
+    -border-color: #cfd8d5;
 
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     --radius: 12px;
