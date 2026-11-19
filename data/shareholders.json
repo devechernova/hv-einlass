@@ -1,0 +1,186 @@
+[
+  {
+    "id": 3,
+    "name": "Rheinische Versorgungskasse AG",
+    "type": "institutionell",
+    "shares": 18000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Hohenzollernring 42", "pc": "50672", "city": "Köln" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Baden Invest GmbH",
+    "type": "institutionell",
+    "shares": 15000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Kaiserstraße 120", "pc": "76133", "city": "Karlsruhe" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Klaus Becker",
+    "type": "privat",
+    "shares": 850,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Venloer Str. 211", "pc": "50823", "city": "Köln" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Aylin Demor",
+    "type": "privat",
+    "shares": 1200,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Poppelsdorfer Allee 18", "pc": "53115", "city": "Bonn" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Peter Schäfer",
+    "type": "privat",
+    "shares": 300,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Lichtentaler Str. 7", "pc": "76530", "city": "Baden-Baden" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Sabine Wolff",
+    "type": "privat",
+    "shares": 4500,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Bertoldstr. 5", "pc": "79098", "city": "Freiburg im Breisgau" },
+      { "kind": "Zustellanschrift", "street": "Sophienstr. 30", "pc": "76530", "city": "Baden-Baden" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Marco Rossi",
+    "type": "privat",
+    "shares": 650,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Aachener Str. 77", "pc": "50674", "city": "Köln" }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Hannah Müller",
+    "type": "privat",
+    "shares": 2000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Hauptstr. 12", "pc": "76543", "city": "Baden-Baden" }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Pensionsfonds Südwest AG",
+    "type": "institutionell",
+    "shares": 12000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Königstraße 50", "pc": "70173", "city": "Stuttgart" }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Jonas Weber",
+    "type": "privat",
+    "shares": 150,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Königsallee 60", "pc": "40212", "city": "Düsseldorf" }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Sandra Vogt",
+    "type": "privat",
+    "shares": 2750,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Deutzer Freiheit 9", "pc": "50679", "city": "Köln" },
+      { "kind": "Zustellanschrift", "street": "Endenicher Str. 4", "pc": "53115", "city": "Bonn" }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Thomas Krämer",
+    "type": "privat",
+    "shares": 5000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Durlacher Allee 33", "pc": "76131", "city": "Karlsruhe" }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Lena Hoffmann",
+    "type": "privat",
+    "shares": 900,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Tübinger Str. 15", "pc": "70178", "city": "Stuttgart" }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "AMAG Mitarbeiterbeteiligung GmbH",
+    "type": "institutionell",
+    "shares": 9000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Schwarzwaldstr. 2", "pc": "76532", "city": "Baden-Baden" }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Dieter Schulz",
+    "type": "privat",
+    "shares": 7500,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Kölnstr. 102", "pc": "53111", "city": "Bonn" },
+      { "kind": "Zustellanschrift", "street": "Postfach 10 22 33", "pc": "40013", "city": "Düsseldorf" }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "María López García",
+    "type": "privat",
+    "shares": 400,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Kaiser-Joseph-Str. 240", "pc": "79098", "city": "Freiburg im Breisgau" }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Erik Neumann",
+    "type": "privat",
+    "shares": 1100,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Zülpicher Str. 50", "pc": "50674", "city": "Köln" }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Sophie Braun",
+    "type": "privat",
+    "shares": 3600,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Schadowstr. 11", "pc": "40212", "city": "Düsseldorf" }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Kölner Stiftung für Bildung",
+    "type": "institutionell",
+    "shares": 8000,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Domkloster 3", "pc": "50667", "city": "Köln" }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Ingrid Fischer",
+    "type": "privat",
+    "shares": 7100,
+    "address": [
+      { "kind": "Hauptanschrift", "street": "Ludwigstr. 8", "pc": "80539", "city": "München" },
+      { "kind": "Zustellanschrift", "street": "Ehrenstr. 20", "pc": "50672", "city": "Köln" }
+    ]
+  }
+]
