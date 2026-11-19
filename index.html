@@ -15,7 +15,55 @@
 
 	<main>
 
-	</main>
+    <section id="praesenz">
+        Präsenz wird geladen...
+    </section>
+
+    <section class="filter">
+
+        <label for="search">
+            Suche:
+        </label>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Name oder Aktionärsnr.">
+
+        <label for="cityFilter">
+            Stadt:
+        </label>
+
+        <select id="cityFilter">
+            <option value="">
+                Alle Städte
+            </option>
+        </select>
+
+    </section>
+
+    <p id="counter"></p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Name</th>
+                <th>Typ</th>
+                <th>Wohnort</th>
+                <th>Aktien</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+
+    </table>
+
+</main>
 
 	<footer>
 		© 2026 AMAG Soft AG
