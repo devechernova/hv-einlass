@@ -1,4 +1,8 @@
-  async function loadData() {
+const tableBody = document.getElementById("tableBody");
+
+let shareholders = [];
+
+async function loadData() {
 
     try {
 
@@ -10,15 +14,22 @@
             );
         }
 
-        const shareholders = await response.json();
+        shareholders = await response.json();
 
-        console.log(shareholders);
+       renderTable();
 
-    } catch (error) {
+    }
+     catch (error) {
 
         console.error(error);
 
     }
+}
+
+function renderTable() {
+
+    console.log("Tabelle wird erstellt");
+
 }
 
 loadData();
