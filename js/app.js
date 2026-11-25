@@ -39,7 +39,7 @@ function renderTable() {
             <td>${shareholder.name}</td>
             <td>${shareholder.type}</td>
             <td>${shareholder.address[0].city}</td>
-            <td>${shareholder.shares}</td>
+            <td>${shareholder.shares.toLocaleString("de-DE")}</td>
             <td>-</td>
         `;
 
