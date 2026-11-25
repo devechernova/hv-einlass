@@ -16,7 +16,7 @@ async function loadData() {
 
         shareholders = await response.json();
 
-       renderTable();
+       renderTable(shareholders);
 
     }
      catch (error) {
@@ -26,11 +26,11 @@ async function loadData() {
     }
 }
 
-function renderTable() {
+function renderTable(list) {
 
      tableBody.innerHTML = "";
 
-      for (const shareholder of shareholders) {
+      for (const shareholder of list) {
 
         const row = document.createElement("tr");
 
