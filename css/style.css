@@ -137,22 +137,18 @@ tbody tr:hover {
 
 
 button {
-    background: var(--accent-color);
+    background-color: var(--primary-color);
     color: white;
-
     border: none;
-    border-radius: 8px;
-
     padding: 8px 14px;
-
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.2s;
+    font-weight: 600;
 }
 
 button:hover {
-    opacity: 0.9;
+    background-color: #104849;
 }
-
 .anwesend {
     background-color: var(--success-color);
 }

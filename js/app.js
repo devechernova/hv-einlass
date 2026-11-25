@@ -4,6 +4,7 @@ const cityFilter = document.getElementById("cityFilter");
 const counter = document.getElementById("counter");
 
 let shareholders = [];
+let checkins = [];
 
 async function loadData() {
 
@@ -18,6 +19,12 @@ async function loadData() {
         }
 
         shareholders = await response.json();
+
+        const savedCheckins = localStorage.getItem("hv-checkins");
+
+checkins = savedCheckins
+    ? JSON.parse(savedCheckins)
+    : [];
 
         populateCityFilter();
         filterShareholders();
@@ -108,30 +115,50 @@ function renderTable(list) {
     }
 
     for (const shareholder of list) {
-        const row = document.createElement("tr");
+       
+const row = document.createElement("tr");
 
-        let city = shareholder.address[0].city;
+let city = shareholder.address[0].city;
 
-        if (shareholder.address.length > 1) {
-            city += ` (+${shareholder.address.length - 1})`;
-        }
+if (shareholder.address.length > 1) {
+    city += ` (+${shareholder.address.length - 1})`;
+}
 
-        const values = [
-            shareholder.id,
-            shareholder.name,
-            shareholder.type,
-            city,
-            shareholder.shares.toLocaleString("de-DE"),
-            "-"
-        ];
+const values = [
+    shareholder.id,
+    shareholder.name,
+    shareholder.type,
+    city,
+    shareholder.shares.toLocaleString("de-DE")
+];
 
-        for (const value of values) {
-            const cell = document.createElement("td");
-            cell.textContent = value;
-            row.appendChild(cell);
-        }
+for (const value of values) {
+    const cell = document.createElement("td");
+    cell.textContent = value;
+    row.appendChild(cell);
+}
 
-        tableBody.appendChild(row);
+// Status anzeigen
+const statusCell = document.createElement("td");
+
+if (checkins.includes(shareholder.id)) {
+
+    statusCell.textContent = "✓ anwesend";
+    row.classList.add("anwesend");
+
+} else {
+
+    const button = document.createElement("button");
+
+    button.textContent = "Einchecken";
+    button.dataset.id = shareholder.id;
+
+    statusCell.appendChild(button);
+}
+
+row.appendChild(statusCell);
+tableBody.appendChild(row);
+
     }
 }
 
@@ -141,6 +168,28 @@ searchInput.addEventListener("input", filterShareholders);
 
 cityFilter.addEventListener("change", filterShareholders);
 
+tableBody.addEventListener("click", function(event) {
 
+    const button = event.target.closest("button[data-id]");
+
+    if (!button) {
+        return;
+    }
+
+    const shareholderId = Number(button.dataset.id);
+
+    if (!checkins.includes(shareholderId)) {
+
+        checkins.push(shareholderId);
+
+        localStorage.setItem(
+            "hv-checkins",
+            JSON.stringify(checkins)
+        );
+    }
+
+    filterShareholders();
+
+});
 // Anwendung starten
 loadData();
