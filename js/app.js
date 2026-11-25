@@ -28,6 +28,7 @@ checkins = savedCheckins
 
         populateCityFilter();
         filterShareholders();
+        updatePresence();
 
     }
      catch (error) {
@@ -162,6 +163,51 @@ tableBody.appendChild(row);
     }
 }
 
+function updatePresence() {
+     // Nur eingecheckte Aktionäre berücksichtigen
+    const presentShareholders = shareholders.filter(shareholder =>
+        checkins.includes(shareholder.id)
+    );
+
+     // Anzahl der anwesenden Aktionäre berechnen
+    const presentCount = presentShareholders.length;
+    const totalCount = shareholders.length;
+
+    // Stimmen der anwesenden Aktionäre und Gesamtstimmen berechnen
+    const presentShares = presentShareholders.reduce(
+        (sum, shareholder) => sum + shareholder.shares,
+        0
+    );
+
+    const totalShares = shareholders.reduce(
+        (sum, shareholder) => sum + shareholder.shares,
+        0
+    );
+
+    // Anteil der anwesenden Stimmen in Prozent berechnen
+    const presencePercent = totalShares > 0
+        ? (presentShares / totalShares) * 100
+        : 0;
+
+    // Ergebnisse auf der Webseite anzeigen
+    document.getElementById("presenceCount").textContent =
+        presentCount.toLocaleString("de-DE");
+
+    document.getElementById("totalCount").textContent =
+        totalCount.toLocaleString("de-DE");
+
+    document.getElementById("presenceShares").textContent =
+        presentShares.toLocaleString("de-DE");
+
+    document.getElementById("totalShares").textContent =
+        totalShares.toLocaleString("de-DE");
+
+    document.getElementById("presencePercent").textContent =
+        presencePercent.toLocaleString("de-DE", {
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 1
+        }) + " %";
+}
 
 // Event Listener
 searchInput.addEventListener("input", filterShareholders);
@@ -189,6 +235,7 @@ tableBody.addEventListener("click", function(event) {
     }
 
     filterShareholders();
+    updatePresence();
 
 });
 // Anwendung starten
