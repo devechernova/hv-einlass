@@ -30,21 +30,23 @@ function renderTable() {
 
      tableBody.innerHTML = "";
 
-    const shareholder = shareholders[0];
+      for (const shareholder of shareholders) {
 
-    const row = document.createElement("tr");
+        const row = document.createElement("tr");
 
-    row.innerHTML = `
-        <td>${shareholder.id}</td>
-        <td>${shareholder.name}</td>
-        <td>${shareholder.type}</td>
-        <td>${shareholder.address[0].city}</td>
-        <td>${shareholder.shares}</td>
-        <td>-</td>
-    `;
+        row.innerHTML = `
+            <td>${shareholder.id}</td>
+            <td>${shareholder.name}</td>
+            <td>${shareholder.type}</td>
+            <td>${shareholder.address[0].city}</td>
+            <td>${shareholder.shares}</td>
+            <td>-</td>
+        `;
 
+    
     tableBody.appendChild(row);
 
-}
+    }
 
-loadData()
+}
+loadData();
