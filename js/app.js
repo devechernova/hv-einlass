@@ -34,11 +34,19 @@ function renderTable() {
 
         const row = document.createElement("tr");
 
+        let city = shareholder.address[0].city;
+
+        if (shareholder.address.length > 1) {
+
+    city += ` (+${shareholder.address.length - 1})`;
+
+}
+
         row.innerHTML = `
             <td>${shareholder.id}</td>
             <td>${shareholder.name}</td>
             <td>${shareholder.type}</td>
-            <td>${shareholder.address[0].city}</td>
+            <td>${city}</td>
             <td>${shareholder.shares.toLocaleString("de-DE")}</td>
             <td>-</td>
         `;
