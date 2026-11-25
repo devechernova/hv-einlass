@@ -1,4 +1,5 @@
 const tableBody = document.getElementById("tableBody");
+const searchInput = document.getElementById("search");
 
 let shareholders = [];
 
@@ -25,6 +26,13 @@ async function loadData() {
 
     }
 }
+
+    function searchShareholders() {
+
+    console.log(searchInput.value);
+
+    }
+
 
 function renderTable(list) {
 
@@ -57,4 +65,6 @@ function renderTable(list) {
     }
 
 }
+searchInput.addEventListener("input", searchShareholders);
+
 loadData();
