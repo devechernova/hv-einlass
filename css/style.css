@@ -6,6 +6,7 @@
     --text-color: #1e3932;
     --border-color: #cfd8d5;
     --success-color: #d4e9e2;
+    --success-hover-color: #e8f4ef;
 
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     --radius: 12px;
@@ -149,8 +150,14 @@ button {
 button:hover {
     background-color: #104849;
 }
-.anwesend {
+/* Eingecheckte Aktionäre hervorheben */
+tbody tr.anwesend {
     background-color: var(--success-color);
+}
+
+/* Hellere Hervorhebung beim Darüberfahren */
+tbody tr.anwesend:hover {
+    background-color: var(--success-hover-color);
 }
 
 footer {
@@ -180,4 +187,10 @@ footer {
     header h1 {
         font-size: 1.8rem;
     }
+}
+
+/* Aktien rechtsbündig ausrichten */
+table th:nth-child(5),
+table td:nth-child(5) {
+    text-align: right;
 }
